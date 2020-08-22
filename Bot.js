@@ -93,10 +93,12 @@ bot.on('message', async message => {
 					if (users != null) {
 						try {
 							if (message.content.slice(7).match(/(https:\/\/(?:t|telegram)\.me)/gi)) {
-								UsersDB.updateOne(
+								UsersDB.collection.updateOne(
 									{ name: message.author.id },
 									{ $set: { link: message.content.slice(7).trim() } },
 								);
+								console.log(message.author.id);
+								console.log(message.content.slice(7).trim());
 								message.channel.send('Successfully updated your account');
 							}
 							else {
