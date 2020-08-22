@@ -1,0 +1,27 @@
+{
+  "name": "telegram-discord-bot",
+  "version": "1.0.0",
+  "main": "Bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "Run": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GlenMerlin/Telegram-Discord-Bot.git"
+  },
+  "keywords": [],
+  "author": "GlenMerlin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GlenMerlin/Telegram-Discord-Bot/issues"
+  },
+  "homepage": "https://github.com/GlenMerlin/Telegram-Discord-Bot#readme",
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "eslint": "^7.6.0",
+    "mongoose": "^5.9.29"
+  },
+  "devDependencies": {},
+  "description": ""
+}

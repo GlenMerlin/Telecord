@@ -1,0 +1,5 @@
+/node_modules
+.config.json
+.eslintrc.json
+/User-Data
+/.vscode
