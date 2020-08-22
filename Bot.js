@@ -155,4 +155,5 @@ bot.on('message', async message => {
 		
 	}
 });
+// Bot login
 bot.login(token);
