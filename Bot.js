@@ -40,7 +40,7 @@ bot.on('message', async message => {
 					.addField('t.register:', 'to set up your account use `t.register <https://t.me/(username)>`')
 					.addField('t.profile:', 'to call your profile link use `t.profile`, use `t.profile @JohnDoe#0000` to see if another user has a telegram account linked with the bot')
 					.addField('t.edit', 'to edit the telegram link associated with your account type `t.edit <https://t.me/(username)>`')
-					.addField('t.delete', 'to deregister your account from the database use `t.deregister`')
+					.addField('t.delete', 'to deregister your account from the database use `t.delete`')
 					.addField('Note:', 'This Bot is still in development and may have issues')
 					.setFooter('Bot made by GlenMerlin');
 				message.channel.send(helpEmbed);
