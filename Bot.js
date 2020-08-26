@@ -15,7 +15,7 @@ db.once('open', function() {
 // Startup
 bot.once('ready', () => {
 	console.log('Started up successfully');
-	bot.user.setActivity('Use t.help for info');
+	bot.user.setActivity('Use t.help for info (direct DMs coming soon)');
 
 });
 
@@ -41,6 +41,7 @@ bot.on('message', async message => {
 					.addField('t.profile:', 'to call your profile link use `t.profile`, use `t.profile @JohnDoe#0000` to see if another user has a telegram account linked with the bot')
 					.addField('t.edit', 'to edit the telegram link associated with your account type `t.edit <https://t.me/(username)>`')
 					.addField('t.delete', 'to deregister your account from the database use `t.delete`')
+					.addField('t.source', 'to view the source code for the bot on github and report any issues you may be having')
 					.addField('Note:', 'This Bot is still in development and may have issues (visit https://t.me/telediscord for announcements)')
 					.setFooter('Bot made by GlenMerlin');
 				message.channel.send(helpEmbed);
@@ -53,7 +54,7 @@ bot.on('message', async message => {
 					if (users != null) {
 						return message.channel.send("You are already registered in my database,\nif you wish to edit or remove yourself from the database please use the appropate commands (see **t.help** for more info)");
 					}
-					if (message.content.slice(11).match(/(https:\/\/(?:t|telegram)\.me)/gi)){
+					if (message.content.slice(11).match(/((?:http|https|)\/\/(?:t|telegram)\.me)/gi)){
 						const addUserDB = new UsersDB ({ name: message.author.id, link: message.content.slice(11).trim() });
 						addUserDB.save(function(err, addUserDB){
 							if (err) return console.error(err);
@@ -92,7 +93,7 @@ bot.on('message', async message => {
 					if (err) return;
 					if (users != null) {
 						try {
-							if (message.content.slice(7).match(/(https:\/\/(?:t|telegram)\.me)/gi)) {
+							if (message.content.slice(7).match(/((?:http|https|)\/\/(?:t|telegram)\.me)/gi)) {
 								UsersDB.collection.updateOne(
 									{ name: message.author.id },
 									{ $set: { link: message.content.slice(7).trim() } },
@@ -148,6 +149,11 @@ bot.on('message', async message => {
 			if (command === 'ping'){
 				const m = await message.channel.send("Checking Ping");
 				m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(bot.ws.ping)}ms`);
+			}
+
+			// Source Command here
+			if (command === 'source'){
+				message.channel.send("My source code is available at https://github.com/GlenMerlin/Telegram-Discord-Bot!");
 			}
 		}
 		catch(err) {
