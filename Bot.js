@@ -42,7 +42,7 @@ bot.on('message', async message => {
 					.addField('t.edit', 'to edit the telegram link associated with your account type `t.edit <https://t.me/(username)>`')
 					.addField('t.delete', 'to deregister your account from the database use `t.delete`')
 					.addField('t.source', 'to view the source code for the bot on github and report any issues you may be having')
-					.addField('Note:', 'This Bot is still in development and may have issues (visit https://t.me/telediscord for announcements)')
+					.addField('Note:', 'this Bot is still in development and may have issues (visit https://t.me/telediscord for announcements)')
 					.setFooter('Bot made by GlenMerlin');
 				message.channel.send(helpEmbed);
 			}
@@ -153,7 +153,7 @@ bot.on('message', async message => {
 
 			// Source Command here
 			if (command === 'source'){
-				message.channel.send("My source code is available at https://github.com/GlenMerlin/Telegram-Discord-Bot!");
+				message.channel.send("My source code is available at <https://github.com/GlenMerlin/Telegram-Discord-Bot>!");
 			}
 		}
 		catch(err) {
