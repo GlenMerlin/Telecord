@@ -4,7 +4,7 @@ module.exports = {
 	async execute(client, message) {
 		let botMsg = await message.channel.send("〽️ Pinging");
 
-		botMsg.edit({ embed: {
+		botMsg.edit('', { embed: {
 			title: "🏓 Ping",
 			description: [
 				"**Server**: `" + (botMsg.createdAt - message.createdAt) + "ms`",
@@ -12,6 +12,7 @@ module.exports = {
 				"**Uptime**: `" + msToTime(client.uptime) + "`",
 			].join("\n"),
 			footer: { text: "Requested by " + message.author.tag, icon_url: message.author.displayAvatarURL },
+			color: '#0088cc',
 			timestamp: new Date(),
 		} }).catch(() => botMsg.edit("An unknown error occurred. Do I have permission to embed links?"));
 
@@ -25,9 +26,9 @@ module.exports = {
 			let sec = Math.floor(minutesms / 1000);
 
 			let str = "";
-			if (days) str = str + days + "d";
-			if (hours) str = str + hours + "h";
-			if (minutes) str = str + minutes + "m";
+			if (days) str = str + days + "d ";
+			if (hours) str = str + hours + "h ";
+			if (minutes) str = str + minutes + "m ";
 			if (sec) str = str + sec + "s";
 
 			return str;
