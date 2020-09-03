@@ -26,7 +26,7 @@ db.once('open', function() {
 // Startup
 bot.once('ready', () => {
 	console.log('Started up successfully');
-	bot.user.setActivity(`Use t.help for info | (direct DMs coming soon) | connecting ${bot.guilds.size} servers`);
+	bot.user.setActivity(`Use t.help for info | (direct DMs coming soon)`);
 
 });
 
@@ -46,7 +46,7 @@ bot.on('message', async message => {
 		try {
 			// Help Command here
 			if (command === 'help') {
-				bot.commands.get('help').execute(message, Discord);
+				bot.commands.get('help').execute(message, Discord, bot);
 			}
 
 			// Register Command Here
