@@ -26,7 +26,7 @@ db.once('open', function() {
 // Startup
 bot.once('ready', () => {
 	console.log('Started up successfully');
-	bot.user.setActivity('Use t.help for info | (direct DMs coming soon) | connecting ${bot.guilds.size} servers');
+	bot.user.setActivity(`Use t.help for info | (direct DMs coming soon) | connecting ${bot.guilds.size} servers`);
 
 });
 
