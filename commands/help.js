@@ -2,6 +2,7 @@ module.exports = {
 	name: "help",
 	description: "send the help message",
 	execute(message, Discord, client) {
+		client.guilds.cache.get;
 		const helpEmbed = new Discord.MessageEmbed()
 			.setTitle('Command List')
 			.addField('t.register:', 'to set up your account use `t.register <https://t.me/(username)>`')
