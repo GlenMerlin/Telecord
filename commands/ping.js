@@ -5,6 +5,7 @@ module.exports = {
 		if(!message.channel.permissionsFor(client.user).has('EMBED_LINKS')){
 			return message.channel.send("Oops I don't have permission to embed messages, please contact the admins about this");
 		}
+		// test
 		let botMsg = await message.channel.send("〽️ Pinging");
 
 		botMsg.edit('', { embed: {
