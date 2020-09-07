@@ -2,9 +2,6 @@ module.exports = {
 	name: "help",
 	description: "send the help message",
 	execute(message, Discord, client) {
-		if(!message.channel.permissionsFor(client.user).has('EMBED_LINKS')){
-			return message.channel.send("Oops I don't have permission to embed messages, please contact the admins about this");
-		}
 		client.guilds.cache.get;
 		const helpEmbed = new Discord.MessageEmbed()
 			.setTitle('Command List')

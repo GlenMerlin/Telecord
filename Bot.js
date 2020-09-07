@@ -46,6 +46,12 @@ bot.on('message', async message => {
 		try {
 			// Help Command here
 			if (command === 'help') {
+				if(message.guild === null){
+					return bot.commands.get('ping').execute(bot, message);
+				}
+				if(!message.channel.permissionsFor(bot.user).has('EMBED_LINKS')){
+					return message.channel.send("Oops I don't have permission to embed messages, please contact the admins about this");
+				}
 				bot.commands.get('help').execute(message, Discord, bot);
 			}
 
@@ -67,6 +73,12 @@ bot.on('message', async message => {
 			}
 			// Ping Command here
 			if (command === 'ping'){
+				if(message.guild === null){
+					return bot.commands.get('ping').execute(bot, message);
+				}
+				if(!message.channel.permissionsFor(bot.user).has('EMBED_LINKS')){
+					return message.channel.send("Oops I don't have permission to embed messages, please contact the admins about this");
+				}
 				bot.commands.get('ping').execute(bot, message);
 			}
 
