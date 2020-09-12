@@ -14,7 +14,7 @@ module.exports = {
 			footer: { text: "Requested by " + message.author.tag, icon_url: message.author.displayAvatarURL },
 			color: '#0088cc',
 			timestamp: new Date(),
-		} }).catch(() => botMsg.edit("An unknown error occurred. Do I have permission to embed links?"));
+		} }).catch(() => botMsg.edit("An unknown error occurred."));
 
 		function msToTime(ms){
 			let days = Math.floor(ms / 86400000);
