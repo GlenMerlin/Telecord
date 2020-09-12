@@ -79,6 +79,9 @@ bot.on('message', async message => {
 				if(!message.channel.permissionsFor(bot.user).has('EMBED_LINKS')){
 					return message.channel.send("Oops I don't have permission to embed messages, please contact the admins about this");
 				}
+				if(!message.channel.permissionsFor(bot.user).has('EDIT_MESSAGES')){
+					return message.channel.send("Oops I don't have permission to edit messages, for this command to work properly I need to edit messages, please contact the server admins about this");
+				}
 				bot.commands.get('ping').execute(bot, message);
 			}
 
