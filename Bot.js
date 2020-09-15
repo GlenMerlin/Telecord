@@ -47,10 +47,13 @@ bot.on('message', async message => {
 			// Help Command here
 			if (command === 'help') {
 				if(message.guild === null){
-					return bot.commands.get('ping').execute(bot, message);
+					return bot.commands.get('help').execute(bot, message);
 				}
 				if(!message.channel.permissionsFor(bot.user).has('EMBED_LINKS')){
 					return message.channel.send("Oops I don't have permission to embed messages, please contact the admins about this");
+				}
+				if(!message.channel.permissionsFor(bot.user).has('EDIT_MESSAGES')){
+					return message.channel.send("Oops I don't have permissions to edit messages, for this command to work properly I need to edit messages, please contact the server admins about this");
 				}
 				bot.commands.get('help').execute(message, Discord, bot);
 			}
