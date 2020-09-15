@@ -1,7 +1,7 @@
 module.exports = {
 	name: "help",
 	description: "send the help message",
-	execute(message, Discord, client) {
+	execute(client, message, Discord) {
 		client.guilds.cache.get;
 		const helpEmbed = new Discord.MessageEmbed()
 			.setTitle('Command List')

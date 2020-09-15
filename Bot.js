@@ -47,7 +47,7 @@ bot.on('message', async message => {
 			// Help Command here
 			if (command === 'help') {
 				if(message.guild === null){
-					return bot.commands.get('help').execute(bot, message);
+					return bot.commands.get('help').execute(bot, message, Discord);
 				}
 				if(!message.channel.permissionsFor(bot.user).has('EMBED_LINKS')){
 					return message.channel.send("Oops I don't have permission to embed messages, please contact the admins about this");
