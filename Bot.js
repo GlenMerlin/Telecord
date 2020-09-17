@@ -52,10 +52,7 @@ bot.on('message', async message => {
 				if(!message.channel.permissionsFor(bot.user).has('EMBED_LINKS')){
 					return message.channel.send("Oops I don't have permission to embed messages, please contact the admins about this");
 				}
-				if(!message.channel.permissionsFor(bot.user).has('EDIT_MESSAGES')){
-					return message.channel.send("Oops I don't have permissions to edit messages, for this command to work properly I need to edit messages, please contact the server admins about this");
-				}
-				bot.commands.get('help').execute(message, Discord, bot);
+				bot.commands.get('help').execute(bot, message, Discord);
 			}
 
 			// Register Command Here
@@ -79,11 +76,8 @@ bot.on('message', async message => {
 				if(message.guild === null){
 					return bot.commands.get('ping').execute(bot, message);
 				}
-				if(!message.channel.permissionsFor(bot.user).has('EMBED_LINKS')){
+				if(!message.channel.permissionsFor(bot.user).has("EMBED_LINKS")){
 					return message.channel.send("Oops I don't have permission to embed messages, please contact the admins about this");
-				}
-				if(!message.channel.permissionsFor(bot.user).has('EDIT_MESSAGES')){
-					return message.channel.send("Oops I don't have permission to edit messages, for this command to work properly I need to edit messages, please contact the server admins about this");
 				}
 				bot.commands.get('ping').execute(bot, message);
 			}
@@ -94,7 +88,7 @@ bot.on('message', async message => {
 			}
 		}
 		catch(err) {
-			message.channel.send('Oops something went wrong... try again later (make sure the bot has perms to embed messages)');
+			message.channel.send('Oops something went wrong... try again later');
 			console.log(err);
 		}
 		
