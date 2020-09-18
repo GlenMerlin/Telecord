@@ -22,9 +22,6 @@
     <a href="https://github.com/GlenMerlin/Telegram-Discord-Bot/issues">Request Feature</a>
   </p>
   <div align="center">
-    <a href="https://corax.team">
-      <img src="https://img.shields.io/badge/Team-Corax-purple">
-    </a>
     <a href="https://github.com/GlenMerlin/Telegram-Discord-Bot/issues">
       <img src="https://img.shields.io/github/issues/GlenMerlin/Telegram-Discord-Bot.svg">
     </a>
