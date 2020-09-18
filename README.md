@@ -4,7 +4,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/GlenMerlin/Telegram-Discord-Bot">
-    <img src="https://pbs.twimg.com/profile_images/1301563340028665856/WqmUQ9bs_200x200.jpg" alt="Logo" width="200px">
+    <img src="./assets/logo.jpg" alt="Logo" width="200px">
   </a>
 
   <h1 align="center">Telecord bot</h1>
