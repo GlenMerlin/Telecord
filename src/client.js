@@ -30,7 +30,7 @@ bot.on("message", async (message) => {
     console.log(parsed.error);
     return;
   }
-  const command = bot.commands.get(parsed.command);
+  const command = bot.commands.get(parsed.command.toLowerCase());
   if (!command) return;
   try {
     command.execute(bot, message, parsed.args);
