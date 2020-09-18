@@ -42,8 +42,6 @@
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Running the project](#running-the-project)
-    - [Using docker](#using-docker)
-    - [Running directly](#running-directly)
 - [Usage (TODO)](#usage-todo)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
@@ -99,31 +97,11 @@ yarn
 
 ### Running the project
 
-The project can be ran by either using Docker, or by running the project directly.
-
-#### Using docker
-
-The [`docker-compose.yml`](./docker-compose.yml) file contains two services. The bot itself, and a MongoDB service. Please read through the comments in the [`docker-compose.yml`](docker-compose.yml) file, as it explains how to disable the MongoDB service in case you don't want to use it.
-
-Starting the docker container:
+Running the project is very simple.
 
 ```bash
-docker compose up --build
+yarn start
 ```
-
-You can remove --build if you don't want to rebuild the image, and just start it.
-
-#### Running directly
-
-Running the project directly is very simple.
-
-```bash
-yarn run dev
-```
-
-> **NOTE: This will not work using `yarn start` unless you manually add the required environment variables. Running the bot in production mode without docker is not the intended
-> way to run the bot. Running directly is only supposed to be used for development and debugging.**
-
 <!-- USAGE EXAMPLES -->
 
 ## Usage (TODO)
