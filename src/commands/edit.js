@@ -2,7 +2,7 @@ const { UserModel } = require("../models/User.js");
 
 module.exports = {
 	name: "edit",
-	description: "This command lets users edit the link stored in the bot's DB",
+	description: "to edit the telegram link associated with your account type `t.edit <https://t.me/(username)>`",
 	execute(client, message, args) {
 		UserModel.findOne({ name: message.author.id }, function(err, users) {
 			if (err) return;

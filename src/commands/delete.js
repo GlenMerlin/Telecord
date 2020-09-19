@@ -2,7 +2,7 @@ const { UserModel } = require("../models/User.js");
 
 module.exports = {
 	name: "delete",
-	description: "This command lets users delete their accounts stored in the bot's DB",
+	description: "to deregister your account from the database use `t.delete`",
 	async execute(client, message, args) {
 		UserModel.findOne({ name: message.author.id }, function(err, users) {
 			if (err) return;

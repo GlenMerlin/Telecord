@@ -2,8 +2,7 @@ const { UserModel } = require("../models/User.js");
 
 module.exports = {
 	name: "profile",
-	description:
-    "this command sends out a request to the database to find a user's profile",
+	description: "to call your profile link use t.profile, use t.profile @JohnDoe#0000 to see if another user has a telegram account linked with the bot (userID's are also acceptable)",
 	execute(client, message, args) {
 		let getTheID = message.author.id;
 		if (message.mentions.users.first()) {

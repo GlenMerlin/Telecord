@@ -1,6 +1,6 @@
 module.exports = {
 	name: "ping",
-	description: "Ping!",
+	description: "Checks the Server response time, API response time, and Uptime of the bot",
 	async execute(client, message, args) {
 		if (message.channel.type !== 'dm'){
 			if (!message.channel.permissionsFor(client.user).has("EMBED_LINKS")) {

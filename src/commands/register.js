@@ -2,8 +2,7 @@ const { UserModel } = require("../models/User.js");
 
 module.exports = {
 	name: "register",
-	description:
-    "this command lets users register with the bot so that it can store their telegram link",
+	description: "to set up your account use `t.register <https://t.me/(username)>`",
 	execute(client, message, args) {
 		UserModel.findOne({ name: message.author.id }, function(err, users) {
 			if (err) return;

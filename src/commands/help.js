@@ -4,7 +4,7 @@ const { prefix } = require("../.config.json");
 
 module.exports = {
 	name: "help",
-	description: "send the help message",
+	description: "sends this help message!",
 	execute(client, message, args) {
 		if (message.channel.type !== 'dm'){
 			if (!message.channel.permissionsFor(client.user).has("EMBED_LINKS")) {

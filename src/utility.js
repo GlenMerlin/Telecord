@@ -3,18 +3,18 @@ const { readdirSync } = require("fs");
 const { resolve } = require("path");
 
 const loadCommands = (path) => {
-  const commands = new Collection();
+	const commands = new Collection();
 
-  const files = readdirSync(path).filter((file) => file.endsWith(".js"));
+	const files = readdirSync(path).filter((file) => file.endsWith(".js"));
 
-  for (let file of files) {
-    const command = require(resolve(path, file));
-    if (command.disabled) {
-      continue;
-    }
-    commands.set(command.name.toLowerCase(), command);
-  }
-  return commands;
+	for (let file of files) {
+		const command = require(resolve(path, file));
+		if (command.disabled) {
+			continue;
+		}
+		commands.set(command.name.toLowerCase(), command);
+	}
+	return commands;
 };
 
 module.exports = { loadCommands: loadCommands };
