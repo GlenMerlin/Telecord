@@ -60,7 +60,7 @@
 ### Built With
 
 - [node.js](https://nodejs.org)
-- [typescript](https://typescriptlang.org)
+- [typescript](https://www.typescriptlang.org)
 - [yarn](https://yarnpkg.com)
 - [discord.js](https://www.npmjs.com/package/discord.js)
 - [mongoose](https://www.npmjs.com/package/mongoose)
