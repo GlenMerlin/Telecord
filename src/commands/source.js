@@ -1,5 +1,5 @@
 module.exports = {
-	name: "Source",
+	name: "source",
 	description: "Gives a message with the source code of the bot",
 	execute: (client, message, args) => {
 		message.channel.send(
