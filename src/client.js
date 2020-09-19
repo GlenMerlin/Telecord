@@ -25,6 +25,9 @@ client.once("ready", () => {
 
 // Commands
 client.on("message", async (message) => {
+	if (message.author.bot){
+		return;
+	}
 	const parsed = parser.parse(message, prefix);
 	if (parsed.error) {
 		console.log(parsed.error);
