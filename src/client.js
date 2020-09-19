@@ -19,27 +19,28 @@ loadMongo();
 
 // Startup
 client.once("ready", () => {
-  console.log("Started up successfully");
-  client.user.setActivity(`Use t.help for info`);
+	console.log("Started up successfully");
+	client.user.setActivity(`Use t.help for info`);
 });
 
 // Commands
 client.on("message", async (message) => {
-  const parsed = parser.parse(message, prefix);
-  if (parsed.error) {
-    console.log(parsed.error);
-    return;
-  }
-  const command = client.commands.get(parsed.command.toLowerCase());
-  if (!command) return;
-  try {
-    command.execute(client, message, parsed.args);
-  } catch (err) {
-    message.channel.send(
-      "Oops! An error has occured! If this keeps happening, please open an issue on github (see `t.source`)"
-    );
-    console.log(err);
-  }
+	const parsed = parser.parse(message, prefix);
+	if (parsed.error) {
+		console.log(parsed.error);
+		return;
+	}
+	const command = client.commands.get(parsed.command.toLowerCase());
+	if (!command) return;
+	try {
+		command.execute(client, message, parsed.args);
+	}
+	catch (err) {
+		message.channel.send(
+			"Oops! An error has occured! If this keeps happening, please open an issue on github (see `t.source`)",
+		);
+		console.log(err);
+	}
 });
 
 // Bot login
