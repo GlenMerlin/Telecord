@@ -2,7 +2,7 @@ const { UserModel } = require("../models/User.js");
 
 module.exports = {
 	name: "register",
-	description: "to set up your account use `t.register <https://t.me/(username)>`",
+	description: "to set up your account use `t.register https://t.me/(username)`",
 	execute(client, message, args) {
 		UserModel.findOne({ name: message.author.id }, function(err, users) {
 			if (err) return;
