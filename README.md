@@ -51,7 +51,7 @@
 
 ## About The Project
 
-[Example](https://i.imgur.com/5Aa5iFN.png)
+https://i.imgur.com/5Aa5iFN.png
 
 <!-- Here's a blank template to get started:
 **To avoid retyping too much info. Do a search and replace with your text editor for the following:**
@@ -104,12 +104,16 @@ yarn start
 ```
 <!-- USAGE EXAMPLES -->
 
-## Usage (TODO)
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://github.com/GlenMerlin/Telegram-Discord-Bot/wiki)_
-
+## Usage
+    t.register https://telegram.me/yourusernamehere (registers you in the bot's database)
+    t.profile (with no arguements returns your profile)
+    t.profile @johndoe#0000 (pulls up another user's profile)
+    t.edit https://telegram.me/yournewusernamehere
+    t.delete (removes your account from the database)
+    t.help (sends the help message)
+    t.source (sends a link to the github page)
+    t.invite (sends an invite to add the bot to your own server)
+<!-- TODO add screenshots of the bot in action -->
 <!-- ROADMAP -->
 
 ## Roadmap
