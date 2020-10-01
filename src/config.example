@@ -1,0 +1,5 @@
+{
+    "prefix": "t.",
+    "token": "bot token",
+    "mongodb": "mongodb URI"
+}
