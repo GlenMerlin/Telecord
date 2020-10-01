@@ -50,8 +50,11 @@
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
+<p align="left">
+  <a href="https://i.imgur.com/5Aa5iFN.png">
+    <img src="https://i.imgur.com/5Aa5iFN.png" alt="Screenshot 1 contents: t.profile, Hey @GlenMerlin I found https://t.me/glenmerlin in the database, @porg add me, woah">
+  </a>
 
-https://i.imgur.com/5Aa5iFN.png
 
 <!-- Here's a blank template to get started:
 **To avoid retyping too much info. Do a search and replace with your text editor for the following:**
