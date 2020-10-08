@@ -24,7 +24,6 @@ module.exports = {
 						// users that don't exist will always have meta name="robots" and channels will always have button saying "Preview channel"
 						if (chunk.toString().includes("robots", "Preview channel")) {
 							message.channel.send("This is not a telegram user.")
-							console.log(message.content.slice(11))
 						} else {
 							const addUserDB = new UserModel({
 								name: message.author.id,
