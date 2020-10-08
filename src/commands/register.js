@@ -1,4 +1,5 @@
 const { UserModel } = require("../models/User.js");
+const https = require("https");
 
 module.exports = {
 	name: "register",
@@ -15,17 +16,28 @@ module.exports = {
 				message.content
 					.slice(11)
 					.match(/((?:http|https|)\/\/(?:t|telegram)\.me)/gi)
-			) {
-				const addUserDB = new UserModel({
-					name: message.author.id,
-					link: message.content.slice(11).trim(),
-				});
-				addUserDB.save(function(err, addUserDB) {
-					if (err) return console.error(err);
-					message.channel.send("Congrats you registered successfully");
-				});
-			}
-			else {
+			) {	
+				const URL = message.content.slice(11)
+				// Send HTTP GET request with this URL, and make sure that this is a user
+				https.get(URL, (response) => {
+					response.on("data", (chunk) => {
+						// users that don't exist will always have meta name="robots" and channels will always have button saying "Preview channel"
+						if (chunk.toString().includes("robots", "Preview channel")) {
+							message.channel.send("This is not a telegram user.")
+							console.log(message.content.slice(11))
+						} else {
+							const addUserDB = new UserModel({
+								name: message.author.id,
+								link: message.content.slice(11).trim(),
+							});
+							addUserDB.save(function(err, addUserDB) {
+								if (err) return console.error(err);
+								message.channel.send("Congrats you registered successfully");
+							});
+						}
+					})
+				})
+			} else {
 				return message.channel.send(
 					"hmm... that doesn't seem to be a valid telegram link\nmake sure you formatted the command properly (check t.help to see proper formatting)",
 				);
