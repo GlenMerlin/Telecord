@@ -1,4 +1,5 @@
 const { UserModel } = require("../models/User.js");
+const https = require("https");
 
 module.exports = {
 	name: "edit",
@@ -8,23 +9,36 @@ module.exports = {
 			if (err) return;
 			if (users != null) {
 				try {
-					if (
-						message.content
-							.slice(7)
-							.match(/((?:http|https|)\/\/(?:t|telegram)\.me)/gi)
-					) {
-						UserModel.collection.updateOne(
-							{ name: message.author.id },
-							{ $set: { link: message.content.slice(7).trim() } },
-						);
-						console.log(message.author.id);
-						console.log(message.content.slice(7).trim());
-						message.channel.send("Successfully updated your account");
-					}
+					let URL = message.content.slice(7);
+					console.log(URL);
+					if (URL.match(/((?:http|https|)\/\/(?:t|telegram)\.me)/gi)) {
+						if (!URL.match(/([!#$%^&*(),;?"{}<>])/gi)){
+							// Checks if the link is using https, if not it upgrades the connection to https
+							if (!URL.match(/https/gi)) {
+								URL = "https" + URL.slice(4);
+							}
+							https.get(URL, (response) => {
+								response.on("data", (chunk) => {
+								// users that don't exist will always have meta name="robots" and channels will always have button saying "Preview channel"
+									if (chunk.toString().includes("robots", "Preview channel")) {
+										message.channel.send("hmm... I couldn't find any registered telegram users associated with that link... make sure you spelled it correctly");
+									}
+									else {
+										UserModel.collection.updateOne(
+											{ name: message.author.id },
+											{ $set: { link: URL } },
+										);
+										message.channel.send("Successfully updated your account");
+									}
+								});
+							});
+						}
+						else {
+							message.channel.send(`hmm... that doesn't seem to be a valid telegram link (check **t.help** for more information)`);
+						}
+					}	
 					else {
-						message.channel.send(
-							`hmm... that doesn't seem to be a valid telegram link (check **t.help** for more information)`,
-						);
+						message.channel.send(`hmm... that doesn't seem to be a valid telegram link (check **t.help** for more information)`);
 					}
 				}
 				catch (e) {
@@ -32,9 +46,7 @@ module.exports = {
 				}
 			}
 			else {
-				message.channel.send(
-					"hmm you don't seem to have an account... lets fix that, run `t.register [telegram account link]` ",
-				);
+				message.channel.send("hmm you don't seem to have an account registered... lets fix that, run `t.register [telegram account link]` ");
 			}
 		});
 	},
