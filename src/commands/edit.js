@@ -10,7 +10,6 @@ module.exports = {
 			if (users != null) {
 				try {
 					let URL = message.content.slice(7);
-					console.log(URL);
 					if (URL.match(/((?:http|https|)\/\/(?:t|telegram)\.me)/gi)) {
 						if (!URL.match(/([!#$%^&*(),;?"{}<>])/gi)){
 							// Checks if the link is using https, if not it upgrades the connection to https

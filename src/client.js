@@ -30,7 +30,7 @@ client.on("message", async (message) => {
 	}
 	const parsed = parser.parse(message, prefix);
 	if (parsed.error) {
-		return console.log(parsed.error);
+		return;
 	}
 	const command = client.commands.get(parsed.command.toLowerCase());
 	if (!command) return;
