@@ -33,7 +33,7 @@ module.exports = {
 							});
 						}
 						else {
-							message.channel.send(`hmm... that doesn't seem to be a valid telegram link (check **t.help** for more information)`);
+							message.channel.send("hmm... that isn't a valid telegram link because it contains invalid characters\nmake sure you typed it correctly");
 						}
 					}	
 					else {

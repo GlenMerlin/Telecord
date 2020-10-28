@@ -20,7 +20,7 @@ module.exports = {
 					// Send HTTP GET request with this URL, and make sure that this is a user
 					https.get(URL, (response) => {
 						response.on("data", (chunk) => {
-						// users that don't exist will always have meta name="robots" and channels will always have button saying "Preview channel"
+							// users that don't exist will always have meta name="robots" and channels will always have button saying "Preview channel"
 							if (chunk.toString().includes("robots", "Preview channel")) {
 								message.channel.send("hmm... I couldn't find any registered telegram users associated with that link, if you're new to telegram sign up at <https://web.telegram.org>");
 							}
@@ -31,11 +31,14 @@ module.exports = {
 								});
 								addUserDB.save(function(err, addUserDB) {
 									if (err) return console.error(err);
-									message.channel.send("Congrats you registered successfully");
+									message.channel.send("Congrats you registered successfully!");
 								});
 							}
 						});
 					});
+				}
+				else {
+					return message.channel.send("hmm... that isn't a valid telegram link because it contains invalid characters\nmake sure you typed it correctly");
 				}
 				
 			}
