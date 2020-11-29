@@ -21,7 +21,8 @@
   "dependencies": {
     "discord-command-parser": "^1.5.1",
     "discord.js": "^12.4.1",
-    "mongoose": "^5.10.13"
+    "mongoose": "^5.10.13",
+    "yarn": "^1.22.10"
   },
   "devDependencies": {
     "eslint": "^7.13.0",
