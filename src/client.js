@@ -22,6 +22,7 @@ client.once("ready", () => {
 	console.log("Started up successfully");
 	client.user.setActivity(`Use t.help for info`);
 });
+// Add code to make the bot run through a tutorial when it is first added to a server
 
 // Commands
 client.on("message", async (message) => {
