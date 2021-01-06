@@ -28,7 +28,7 @@ module.exports = {
 		});
 		helpEmbed.addField(
 			"Note:",
-			"this Bot is still in development and may have issues (visit https://t.me/telediscord for announcements)",
+			"this Bot cannot send messages between discord and telegram (this is a restriction with telegram's API) (visit https://t.me/telediscord for announcements)",
 		);
 		message.channel.send(helpEmbed);
 	},
