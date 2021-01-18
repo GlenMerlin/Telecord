@@ -3,7 +3,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/GlenMerlin/Telegram-Discord-Bot">
+  <a href="https://github.com/GlenMerlin/Telecord">
     <img src="./assets/logo.svg" alt="Logo" width="200px">
   </a>
 
@@ -12,21 +12,21 @@
   <p align="center">
     A discord bot to link your Discord Account and Telegram Account so you can easily start up encrypted chat messages with your discord friends!
     <br />
-    <a href="https://github.com/GlenMerlin/Telegram-Discord-Bot/wiki"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/GlenMerlin/Telecord/wiki"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/GlenMerlin/Telegram-Discord-Bot">View Demo</a>
+    <a href="https://github.com/GlenMerlin/Telecord">View Demo</a>
     ·
-    <a href="https://github.com/GlenMerlin/Telegram-Discord-Bot/issues">Report Bug</a>
+    <a href="https://github.com/GlenMerlin/Telecord/issues">Report Bug</a>
     ·
-    <a href="https://github.com/GlenMerlin/Telegram-Discord-Bot/issues">Request Feature</a>
+    <a href="https://github.com/GlenMerlin/Telecord/issues">Request Feature</a>
   </p>
   <div align="center">
-    <a href="https://github.com/GlenMerlin/Telegram-Discord-Bot/issues">
-      <img src="https://img.shields.io/github/issues/GlenMerlin/Telegram-Discord-Bot.svg">
+    <a href="https://github.com/GlenMerlin/Telecord/issues">
+      <img src="https://img.shields.io/github/issues/GlenMerlin/Telecord.svg">
     </a>
-    <a href="https://github.com/GlenMerlin/Telegram-Discord-Bot/pulls">
-      <img src="https://img.shields.io/github/issues-pr-raw/GlenMerlin/Telegram-Discord-Bot.svg">
+    <a href="https://github.com/GlenMerlin/Telecord/pulls">
+      <img src="https://img.shields.io/github/issues-pr-raw/GlenMerlin/Telecord.svg">
     </a>
   </div>
 </p>
@@ -90,7 +90,7 @@ npm i -g yarn@latest
 1. Clone the repo
 
 ```bash
-git clone https://github.com/GlenMerlin/Telegram-Discord-Bot.git
+git clone https://github.com/GlenMerlin/Telecord.git
 ```
 
 2. Install NPM packages
@@ -152,4 +152,4 @@ This readme file, along with the contributing and code of conduct files were ori
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [original-template]: https://github.com/csivitu/Template
-[issues-link]: https://github.com/GlenMerlin/Telegram-Discord-Bot/issues
+[issues-link]: https://github.com/GlenMerlin/Telecord/issues
