@@ -43,7 +43,7 @@ client.on("message", async (message) => {
 			"Oops! An error has occured! If this keeps happening, please open an issue on github (see `t.source`)",
 		).catch(err => {
 			// API Error Handling
-			// TODO: Will try to implement something so API Errors don't flood the logs but for not, it ignores the error.
+			// TODO: Will try to implement something so API Errors don't flood the logs but for now, it ignores the error.
 			return err;
 		});
 		console.log(err);
