@@ -21,9 +21,26 @@ loadMongo();
 client.once("ready", () => {
 	console.log("Started up successfully");
 	client.user.setActivity(`Use t.help for info`);
+	client.api.applications(client.user.id).guilds('560585485249151026').commands.post({
+		data: {
+			"name": "SlashCommand",
+			"description": "This Command is a test",
+		},
+	});
 });
 // Add code to make the bot run through a tutorial when it is first added to a server
 
+// Slash Commands
+client.ws.on('INTERACTION_CREATE', async interaction => {
+	client.api.interactions(interaction.id, interaction.token).callback.post(({
+		data: {
+			type: 4,
+			data: {
+				content: 'hello world!',
+			},
+		},
+	}));
+});
 // Commands
 client.on("message", async (message) => {
 	if (message.author.bot){
