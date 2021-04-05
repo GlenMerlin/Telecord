@@ -21,25 +21,37 @@ loadMongo();
 client.once("ready", () => {
 	console.log("Started up successfully");
 	client.user.setActivity(`Use t.help for info`);
-	client.api.applications(client.user.id).guilds('560585485249151026').commands.post({
+	client.api.applications(client.user.id).guilds('560585485249151026').commands().post({
 		data: {
-			"name": "SlashCommand",
-			"description": "This Command is a test",
+			"name": "UserInputTest",
+			"description": "UserInputTestDescription",
+			"options": [
+				{
+					"type": 3,
+					"name": "UserInput",
+					"description": "UserInputDescription",
+					"default": false,
+					"required": true,
+				},
+			],
 		},
 	});
 });
 // Add code to make the bot run through a tutorial when it is first added to a server
 
 // Slash Commands
+
 client.ws.on('INTERACTION_CREATE', async interaction => {
-	client.api.interactions(interaction.id, interaction.token).callback.post(({
-		data: {
-			type: 4,
-			data: {
-				content: 'hello world!',
-			},
-		},
-	}));
+	console.log(interaction);
+	// remove the hard coded value here and search dynamically depending on which command they used
+	const command = client.commands.get('help');
+	console.log(command);
+	try {
+		command.execute(client, interaction);
+	}
+	catch (err){
+		console.log(err);
+	}
 });
 // Commands
 client.on("message", async (message) => {
