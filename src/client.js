@@ -23,17 +23,8 @@ client.once("ready", () => {
 	client.user.setActivity(`Use t.help for info`);
 	client.api.applications(client.user.id).guilds('560585485249151026').commands().post({
 		data: {
-			"name": "UserInputTest",
-			"description": "UserInputTestDescription",
-			"options": [
-				{
-					"type": 3,
-					"name": "UserInput",
-					"description": "UserInputDescription",
-					"default": false,
-					"required": true,
-				},
-			],
+			"name": "Delete",
+			"description": "Deletes your account from the bot's database",
 		},
 	});
 });
@@ -44,7 +35,8 @@ client.once("ready", () => {
 client.ws.on('INTERACTION_CREATE', async interaction => {
 	console.log(interaction);
 	// remove the hard coded value here and search dynamically depending on which command they used
-	const command = client.commands.get('help');
+
+	const command = client.commands.get(interaction.data.name);
 	console.log(command);
 	try {
 		command.execute(client, interaction);
