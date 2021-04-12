@@ -28,13 +28,11 @@ client.once("ready", () => {
 		},
 	});
 });
-// Add code to make the bot run through a tutorial when it is first added to a server
 
 // Slash Commands
 
 client.ws.on('INTERACTION_CREATE', async interaction => {
 	console.log(interaction);
-	// remove the hard coded value here and search dynamically depending on which command they used
 
 	const command = client.commands.get(interaction.data.name);
 	console.log(command);
@@ -45,6 +43,7 @@ client.ws.on('INTERACTION_CREATE', async interaction => {
 		console.log(err);
 	}
 });
+
 // Commands
 client.on("message", async (message) => {
 	if (message.author.bot){
