@@ -20,13 +20,13 @@
   "homepage": "https://github.com/GlenMerlin/Telegram-Discord-Bot#readme",
   "dependencies": {
     "discord-command-parser": "^1.5.1",
-    "discord.js": "^12.4.1",
+    "discord.js": "^12.5.3",
     "ini": "^2.0.0",
-    "mongoose": "^5.12.2",
+    "mongoose": "^5.12.6",
     "yarn": "^1.22.10"
   },
   "devDependencies": {
-    "eslint": "^7.23.0",
+    "eslint": "^7.25.0",
     "nodemon": "^2.0.7"
   },
   "description": ""
