@@ -22,11 +22,11 @@
     "discord-command-parser": "^1.5.1",
     "discord.js": "^12.4.1",
     "ini": "^2.0.0",
-    "mongoose": "^5.11.7",
+    "mongoose": "^5.11.8",
     "yarn": "^1.22.10"
   },
   "devDependencies": {
-    "eslint": "^7.15.0",
+    "eslint": "^7.16.0",
     "nodemon": "^2.0.6"
   },
   "description": ""
