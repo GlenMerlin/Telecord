@@ -19,10 +19,12 @@
   },
   "homepage": "https://github.com/GlenMerlin/Telegram-Discord-Bot#readme",
   "dependencies": {
+    "0g": "^0.0.6",
     "discord-command-parser": "^1.5.1",
     "discord.js": "^12.4.1",
     "ini": "^2.0.0",
     "mongoose": "^5.11.8",
+    "npm": "^7.15.0",
     "yarn": "^1.22.10"
   },
   "devDependencies": {
