@@ -114,7 +114,6 @@ yarn dev
 <!-- USAGE EXAMPLES -->
 
 ## Usage
-<<<<<<< HEAD
     register https://telegram.me/yourusernamehere (registers you in the bot's database)
     profile (with no arguements returns your profile)
     profile @johndoe#0000 (pulls up another user's profile)
@@ -124,17 +123,6 @@ yarn dev
     source (sends a link to the github page)
     invite (sends an invite to add the bot to your own server)
 <!-- TODO add screenshots of the bot in action -->
-=======
-    t.register https://telegram.me/yourusernamehere (registers you in the bot's database)
-    t.profile (with no arguements returns your profile)
-    t.profile @johndoe#0000 (pulls up another user's profile)
-    t.edit https://telegram.me/yournewusernamehere
-    t.delete (removes your account from the database)
-    t.help (sends the help message)
-    t.source (sends a link to the github page)
-    t.invite (sends an invite to add the bot to your own server)
-
->>>>>>> master
 <!-- ROADMAP -->
 
 ## Roadmap
