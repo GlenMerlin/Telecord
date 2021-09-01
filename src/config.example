@@ -1,5 +1,5 @@
 {
-    "prefix": "t.",
+    "clientID" : "{bot userId}",
     "token": "{bot token}",
     "mongodb": "{mongodb URI}"
 }

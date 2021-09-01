@@ -109,14 +109,14 @@ yarn start
 <!-- USAGE EXAMPLES -->
 
 ## Usage
-    t.register https://telegram.me/yourusernamehere (registers you in the bot's database)
-    t.profile (with no arguements returns your profile)
-    t.profile @johndoe#0000 (pulls up another user's profile)
-    t.edit https://telegram.me/yournewusernamehere
-    t.delete (removes your account from the database)
-    t.help (sends the help message)
-    t.source (sends a link to the github page)
-    t.invite (sends an invite to add the bot to your own server)
+    register https://telegram.me/yourusernamehere (registers you in the bot's database)
+    profile (with no arguements returns your profile)
+    profile @johndoe#0000 (pulls up another user's profile)
+    edit https://telegram.me/yournewusernamehere
+    delete (removes your account from the database)
+    help (sends the help message)
+    source (sends a link to the github page)
+    invite (sends an invite to add the bot to your own server)
 <!-- TODO add screenshots of the bot in action -->
 <!-- ROADMAP -->
 
@@ -138,6 +138,17 @@ Contributions are what make the open source community such an amazing place to b
 
 You are requested to follow the contribution guidelines specified in [CONTRIBUTING.md](./CONTRIBUTING.md) while contributing to the project :smile:.
 
+<!-- Privacy -->
+
+## Privacy
+
+What data we collect:
+- Discord account IDs (snowflakes)
+- Links you provide
+
+This bot is open source partially because of the privacy aspect, this bot does not read conversations and only stores your userID in association with your telegram link
+
+if you wish to delete your account and wipe all data the bot has collected simply run /delete, if for some reason you are unable to access your discord account and want your data deleted reach out to me at glenmerlin@protonmail.com
 <!-- LICENSE -->
 
 ## License
