@@ -42,7 +42,7 @@
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Running the project](#running-the-project)
-- [Usage (TODO)](#usage-todo)
+- [Usage](#usage)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
 - [License](#license)
@@ -63,12 +63,11 @@
 ### Built With
 
 - [node.js](https://nodejs.org)
-- [typescript](https://www.typescriptlang.org)
+- [javascript](https://www.javascript.com)
 - [yarn](https://yarnpkg.com)
 - [discord.js](https://www.npmjs.com/package/discord.js)
 - [mongoose](https://www.npmjs.com/package/mongoose)
 - [mongoDB](https://mongoDB.com/)
-<!-- - []() -->
 
 <!-- GETTING STARTED -->
 
@@ -99,16 +98,23 @@ git clone https://github.com/GlenMerlin/Telecord.git
 yarn
 ```
 
+3. Set variables in config.json
+```bash
+cd pathToTelecord/src
+cp config.example config.json
+```
+Simply set the proper values URI and Token for your database and discord bot respectively
 ### Running the project
 
 Running the project is very simple.
 
 ```bash
-yarn start
+yarn dev
 ```
 <!-- USAGE EXAMPLES -->
 
 ## Usage
+<<<<<<< HEAD
     register https://telegram.me/yourusernamehere (registers you in the bot's database)
     profile (with no arguements returns your profile)
     profile @johndoe#0000 (pulls up another user's profile)
@@ -118,6 +124,17 @@ yarn start
     source (sends a link to the github page)
     invite (sends an invite to add the bot to your own server)
 <!-- TODO add screenshots of the bot in action -->
+=======
+    t.register https://telegram.me/yourusernamehere (registers you in the bot's database)
+    t.profile (with no arguements returns your profile)
+    t.profile @johndoe#0000 (pulls up another user's profile)
+    t.edit https://telegram.me/yournewusernamehere
+    t.delete (removes your account from the database)
+    t.help (sends the help message)
+    t.source (sends a link to the github page)
+    t.invite (sends an invite to add the bot to your own server)
+
+>>>>>>> master
 <!-- ROADMAP -->
 
 ## Roadmap
