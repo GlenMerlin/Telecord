@@ -1202,7 +1202,7 @@ mongoose@^5.12.6:
     kareem "2.3.2"
     mongodb "3.6.11"
     mongoose-legacy-pluralize "1.0.2"
-    mpath "0.8.3"
+    mpath "0.8.4"
     mquery "3.2.5"
     ms "2.1.2"
     optional-require "1.0.x"
@@ -1211,9 +1211,9 @@ mongoose@^5.12.6:
     sift "13.5.2"
     sliced "1.0.1"
 
-mpath@0.8.3:
-  version "0.8.3"
-  resolved "https://registry.npmjs.org/mpath/-/mpath-0.8.3.tgz"
+mpath@0.8.4:
+  version "0.8.4"
+  resolved "https://registry.npmjs.org/mpath/-/mpath-0.8.4.tgz"
   integrity sha512-eb9rRvhDltXVNL6Fxd2zM9D4vKBxjVVQNLNijlj7uoXUy19zNDsIif5zR+pWmPCWNKwAtqyo4JveQm4nfD5+eA==
 
 mquery@3.2.5:
