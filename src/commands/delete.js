@@ -2,7 +2,7 @@ const { UserModel } = require("../models/User.js");
 
 module.exports = {
 	name: "delete",
-	description: "to deregister your account from the database use `/delete`",
+	description: "Deletes your account and all data from my database",
 	async execute(client, interaction) {
 		UserModel.findOne({ name: interaction.user.id }, function(err, users) {
 			if (err) return;

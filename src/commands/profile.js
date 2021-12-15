@@ -3,7 +3,7 @@ let getTheID = 0;
 
 module.exports = {
 	name: "profile",
-	description: "to call your profile link use `/profile`, use `/profile @JohnDoe#0000` to see if another user has a telegram account linked with the bot (userIDs/snowflakes are also acceptable)",
+	description: "Call your profile link using `/profile`, use `/profile @JohnDoe#0000` to see if another user has a telegram account linked with the bot (userIDs/snowflakes are also acceptable)",
 	execute(client, interaction ) {
 		if (interaction.options.getUser('username') != null){
 			getTheID = interaction.options.getUser('username').id;

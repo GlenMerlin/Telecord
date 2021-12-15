@@ -3,7 +3,7 @@ const https = require("https");
 
 module.exports = {
 	name: "register",
-	description: "to set up your account use `/register https://t.me/(username)`",
+	description: "Creates an entry in my database for you (insert the link like: https://t.me/[username])",
 	execute(client, interaction,) {
 		UserModel.findOne({ name: interaction.user.id }, function(err, users) {
 			if (err) return;
@@ -24,7 +24,7 @@ module.exports = {
 						response.on("data", (chunk) => {
 							// users that don't exist will always have meta name="robots" and channels will always have button saying "Preview channel"
 							if (chunk.toString().includes("robot", "Preview channel")) {
-								interaction.reply({ content: "hmm... I couldn't find any registered telegram users associated with that link, if you're new to telegram sign up at <https://web.telegram.org>", ephemeral: true });
+								interaction.reply({ content: "Hmm... I couldn't find any registered telegram users associated with that link, if you're new to telegram sign up at <https://web.telegram.org>", ephemeral: true });
 							}
 							else {
 								const addUserDB = new UserModel({
@@ -40,13 +40,13 @@ module.exports = {
 					});
 				}
 				else {
-					return interaction.reply({ content: "hmm... that telegram link contains invalid characters\nmake sure you typed it correctly", ephemeral: true });
+					return interaction.reply({ content: "Hmm... that telegram link contains invalid characters\nmake sure you typed it correctly", ephemeral: true });
 				}
 				
 			}
 			else {
 				console.log(err);
-				return interaction.reply({ content: "hmm... that doesn't seem to be a valid telegram link\nmake sure you formatted the command properly (check /help to see proper formatting)", ephemeral: true });
+				return interaction.reply({ content: "Hmm... that doesn't seem to be a valid telegram link\nmake sure you formatted the command properly (check /help to see proper formatting)", ephemeral: true });
 			}
 		});
 	},

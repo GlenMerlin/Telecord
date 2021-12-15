@@ -3,7 +3,7 @@ const wait = require('util').promisify(setTimeout);
 
 module.exports = {
 	name: "ping",
-	description: "Checks the Server response time, API response time, and uptime of the bot",
+	description: "Checks the Server response time, API response time, and Uptime of the bot",
 	async execute(client, interaction) {
 		let botMsg = new Date();
 		

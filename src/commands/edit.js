@@ -3,7 +3,7 @@ const https = require("https");
 
 module.exports = {
 	name: "edit",
-	description: "to edit the telegram link associated with your account type `/edit https://t.me/(username)`",
+	description: "Edit the Telegram link associated with your account using `/edit https://t.me/(username)`",
 	execute(client, interaction ) {
 		UserModel.findOne({ name: interaction.user.id }, function(err, users) {
 			if (err) return;
@@ -21,7 +21,7 @@ module.exports = {
 								response.on("data", (chunk) => {
 								// users that don't exist will always have meta name="robots" and channels will always have button saying "Preview channel"
 									if (chunk.toString().includes("robots", "Preview channel")) {
-										interaction.reply({ content: "hmm... I couldn't find any registered telegram users associated with that link... make sure you spelled it correctly", ephemeral: true });
+										interaction.reply({ content: "Hmm... I couldn't find any registered telegram users associated with that link... make sure you spelled it correctly", ephemeral: true });
 									}
 									else {
 										UserModel.collection.updateOne(
@@ -34,11 +34,11 @@ module.exports = {
 							});
 						}
 						else {
-							interaction.reply({ content: "hmm... that isn't a valid telegram link because it contains invalid characters\nmake sure you typed it correctly", ephemeral: true });
+							interaction.reply({ content: "Hmm... that isn't a valid telegram link because it contains invalid characters\nmake sure you typed it correctly", ephemeral: true });
 						}
 					}	
 					else {
-						interaction.reply({ content: `hmm... that doesn't seem to be a valid telegram link (check **/help** for more information)`, ephemeral: true });
+						interaction.reply({ content: `Hmm... that doesn't seem to be a valid telegram link (check **/help** for more information)`, ephemeral: true });
 					}
 				}
 				catch (e) {
@@ -46,7 +46,7 @@ module.exports = {
 				}
 			}
 			else {
-				interaction.reply({ content: "hmm you don't seem to have an account registered... lets fix that, run `/register [telegram account link]` ", ephemeral: true });
+				interaction.reply({ content: "Hmm you don't seem to have an account registered... lets fix that, run `/register [telegram account link]` ", ephemeral: true });
 			}
 		});
 	},
