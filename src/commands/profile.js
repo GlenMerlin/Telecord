@@ -22,7 +22,18 @@ module.exports = {
 			if (users == null) {
 				return interaction.reply({ content: "Sorry I couldn't find anything in the database", ephemeral: true });
 			}
-			interaction.reply(`I found ${users.link} in the database!`);
+			if (interaction.options.getBoolean('show') != null){
+				if (interaction.options.getBoolean('show') == true){
+					interaction.reply(`I found ${users.link} in the database!`);
+				}
+				else if (interaction.options.getBoolean('show') == false){
+					return(interaction.reply({ content: `I found ${users.link} in the database!`, ephemeral: true }))
+				}
+								
+			}
+			else {
+				interaction.reply({ content: `I found ${users.link} in the database!`, ephemeral: true });
+			}
 		});
 	},
 };
