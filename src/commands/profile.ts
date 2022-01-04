@@ -1,4 +1,4 @@
-const { UserModel } = require("../models/User.js");
+import { UserModel } from '../models/User'
 let getTheID = 0;
 
 module.exports = {

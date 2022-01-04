@@ -7,9 +7,7 @@ module.exports = {
 		const helpEmbed = new MessageEmbed()
 			.setTitle("Command List")
 			.setColor("0088cc")
-			.setFooter(
-				`Bot made by GlenMerlin, currently serving ${client.guilds.cache.size} Server(s)`,
-			);
+			.setFooter(`Bot made by GlenMerlin, currently serving ${client.guilds.cache.size} Server(s)`);
 
 		client.commands.forEach((command) => {
 			helpEmbed.addField(

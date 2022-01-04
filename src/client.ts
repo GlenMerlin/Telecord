@@ -1,14 +1,12 @@
 // Includes
 const { Client, Intents} = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
-
 const loadMongo = require("./handlers/mongodb");
-
-const { token } = require("./.config.json");
-const { loadCommands } = require("./utility.ts");
-
-const { resolve } = require("path");
+const {loadCommands} = require("./utility");
+const { token } = require("../.config.json");
+import { resolve } from 'path'
 const path = resolve(__dirname, "commands");
+
 client.commands = loadCommands(path);
 
 // Connect to database

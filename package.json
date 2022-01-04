@@ -4,8 +4,8 @@
   "main": "src/client.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/client.js",
-    "start": "node src/client.js"
+    "dev": "nodemon build/client.js",
+    "start": "node build/client.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
     "ini": "^2.0.0",
     "mongoose": "^5.12.6",
     "source-map-loader": "^3.0.1",
+    "typescript": "^4.5.4",
     "yarn": "^1.22.10"
   },
   "devDependencies": {

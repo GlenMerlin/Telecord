@@ -1,10 +1,18 @@
 {
     "compilerOptions": {
-        "outDir": "./dist",
-        "allowJs": true,
-        "target": "es5"
+        "module": "commonjs",
+        "target": "ES6",
+        "lib": ["ESNext"],
+        "moduleResolution": "node",
+        "rootDir": "./src",
+        "outDir": "./build",
+        "newLine": "lf",
+        "sourceMap": false,
+        "baseUrl": ".",
+        "removeComments": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
     },
-        "include": [
-        "./src/**/*"
-    ]
+    "typeRoots": ["./node_modules/@types", "./src/typings"],
+    "exclude": ["node_modules", "./build"]
 }
