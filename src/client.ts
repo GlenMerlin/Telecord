@@ -5,7 +5,7 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 const loadMongo = require("./handlers/mongodb");
 
 const { token } = require("./.config.json");
-const { loadCommands } = require("./utility");
+const { loadCommands } = require("./utility.ts");
 
 const { resolve } = require("path");
 const path = resolve(__dirname, "commands");
