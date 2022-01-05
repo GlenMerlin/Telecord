@@ -1,4 +1,4 @@
-const { UserModel } = require("../models/User.js");
+import { UserModel } from '../models/User'
 
 module.exports = {
 	name: "delete",
@@ -8,7 +8,7 @@ module.exports = {
 			if (err) return;
 			if (users != null) {
 				try {
-					UserModel.collection.deleteOne({ name: interaction.member.user.id });
+					UserModel.collection.deleteOne({ name: interaction.user.id });
 
 					interaction.reply({ content: "Account deleted successfully, if you change your mind you can always sign up again with /register", ephemeral: true });
 				}

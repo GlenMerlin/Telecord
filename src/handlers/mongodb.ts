@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const { mongodb } = require("../.config.json");
+const { mongodb } = require("../../.config.json");
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));

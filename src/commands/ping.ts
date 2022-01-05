@@ -1,11 +1,11 @@
-const { MessageEmbed} = require("discord.js");
+import { MessageEmbed } from 'discord.js';
 const wait = require('util').promisify(setTimeout);
 
 module.exports = {
 	name: "ping",
 	description: "Checks the Server response time, API response time, and Uptime of the bot",
 	async execute(client, interaction) {
-		let botMsg = new Date();
+		let botMsg: any = new Date();
 		
 		interaction.reply("〽️ Pinging");
 		await wait (1500)
@@ -17,9 +17,9 @@ module.exports = {
 				{name: "**API**:", value: `${Math.round(client.ws.ping)} ms`},
 				{name: "**Uptime**:", value: `${msToTime(client.uptime)}`},
 			)
-			.setFooter("Requested by " + interaction.user.username)
-			.setColor("0088cc")
-			.setTimestamp(new Date());
+			.setColor("#0088cc")
+			.setTimestamp(new Date())
+			.setFooter(`Requested by ${interaction.user.username}`);
 
 		// this may look like it sends nothing but it contains a zero width character to remove the original pinging message
 		await interaction.editReply({ content: "​", embeds: [pingEmbed] });	

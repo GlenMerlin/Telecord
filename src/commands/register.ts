@@ -1,5 +1,5 @@
-const { UserModel } = require("../models/User.js");
-const https = require("https");
+import { UserModel } from '../models/User'
+import https = require("https");
 
 module.exports = {
 	name: "register",

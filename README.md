@@ -61,7 +61,7 @@
 ### Built With
 
 - [node.js](https://nodejs.org)
-- [javascript](https://www.javascript.com)
+- [typescript](https://www.typescriptlang.org)
 - [yarn](https://yarnpkg.com)
 - [discord.js](https://www.npmjs.com/package/discord.js)
 - [mongoose](https://www.npmjs.com/package/mongoose)
@@ -106,9 +106,17 @@ Simply set the proper values URI and Token for your database and discord bot res
 
 Running the project is very simple.
 
+run
+```bash
+npx tsc
+```
+to compile the typescript into javascript
+
+run
 ```bash
 yarn dev
 ```
+to start the bot
 <!-- USAGE EXAMPLES -->
 
 ## Usage
