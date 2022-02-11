@@ -159,7 +159,7 @@ What data we collect:
 
 This bot is open source partially because of the privacy aspect, this bot does not read conversations and only stores your userID in association with your telegram link
 
-if you wish to delete your account and wipe all data the bot has collected simply run /delete, if for some reason you are unable to access your discord account and want your data deleted reach out to me at glenmerlin@protonmail.com
+if you wish to delete your account and wipe all data the bot has collected simply run /delete, if for some reason you are unable to access your discord account and want your data deleted reach out to me at glenmerlin@glenmerlin.me
 <!-- LICENSE -->
 
 ## License
