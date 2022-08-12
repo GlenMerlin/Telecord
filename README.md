@@ -10,10 +10,8 @@
   <p align="center">
     A discord bot to link your Discord Account and Telegram Account so you can easily start up encrypted chat messages with your discord friends!
     <br />
-    <a href="https://github.com/GlenMerlin/Telecord/wiki"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/GlenMerlin/Telecord">View Demo</a>
     ·
     <a href="https://github.com/GlenMerlin/Telecord/issues">Report Bug</a>
     ·
