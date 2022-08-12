@@ -5,7 +5,7 @@
     <img src="./assets/logo.svg" alt="Logo" width="200px">
   </a>
 
-  <h1 align="center">Telecord bot</h1>
+  <h1 align="center">Telecord</h1>
 
   <p align="center">
     A discord bot to link your Discord Account and Telegram Account so you can easily start up encrypted chat messages with your discord friends!
