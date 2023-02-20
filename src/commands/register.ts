@@ -23,7 +23,9 @@ module.exports = {
 					https.get(URL, (response) => {
 						response.on("data", (chunk) => {
 							// users that don't exist will always have meta name="robots" and channels will always have button saying "Preview channel"
-							if (chunk.toString().includes("robot", "Preview channel")) {
+							// ! This code is broken due to Telegram adding roboto fonts to their website
+							// ! chunk.toString().includes("robots", "Preview channel")
+							if (chunk.toString().includes("Preview channel")) {
 								interaction.reply({ content: "Hmm... I couldn't find any registered telegram users associated with that link, if you're new to telegram sign up at <https://web.telegram.org>", ephemeral: true });
 							}
 							else {
