@@ -1214,8 +1214,8 @@ ini@^3.0.0:
   resolved "https://registry.npmjs.org/ini/-/ini-3.0.0.tgz"
 
 ip@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/ip/-/ip-2.0.0.tgz#4cf4ab182fee2314c75ede1276f8c80b479936da"
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/ip/-/ip-2.0.1.tgz#e8f3595d33a3ea66490204234b77636965307105"
 
 is-extglob@^2.1.1:
   version "2.1.1"
